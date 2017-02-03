@@ -1,0 +1,18 @@
+server:
+  port: 8761
+spring:
+  application:
+    name: sanjiang-eureka
+eureka:
+  instance:
+    hostname: localhost
+#    preferIpAddress=true：优先使用ip而不是hostname来查找服务
+    prefer-ip-address: true
+    app-group-name:
+  client:
+#  作集群时需要设置heartbeat时间同步
+    registry-fetch-interval-seconds: 30
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://srv3.sanjiang.info:${server.port}/eureka/
