@@ -1,0 +1,2 @@
+# sanjiang-eureka
+eureka server
